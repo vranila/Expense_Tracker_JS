@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Expense Tracker</h1>
+
+    <!-- Form -->
+    <form id="expenseForm">
+        <input type="text" id="expenseName" placeholder="Expense Name">
+        <input type="number" id="expenseAmount" placeholder="Amount">
+
+        <select id="expenseCategory">
+            <option value="">Select Category</option>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Bills">Bills</option>
+        </select>
+
+        <input type="date" id="expenseDate">
+        <button type="submit">Add Expense</button>
+    </form>
+
+    <br>
+
+    <!-- Filter -->
+    <label>Filter by Category:</label>
+    <select id="filterCategory">
+        <option value="All">All</option>
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Bills">Bills</option>
+    </select>
+
+    <!-- Total -->
+    <div class="total-section">
+        Total Expense: ₹ <span id="totalAmount">0</span>
+    </div>
+
+    <!-- Expense List -->
+    <div id="expenseList"></div>
+
+    <!-- Chart -->
+    <canvas id="expenseChart"></canvas>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
